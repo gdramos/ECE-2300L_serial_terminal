@@ -1,26 +1,37 @@
 <style>
    @font-face{
       font-family: myFont;
-      src: url("../html_serial_terminal/RationalInteger.ttf") format('truetype');
+      src: url("Robaga Rounded Regular.otf") format('truetype');
     }
     * 
     {
         background-color: #2e2e2e;
-        font-family: myFont;
-        font-size: 100%;
+        font-family: monospace;
+        font-size: 110%;
         letter-spacing: 1.5px;
         color: rgb(48, 213, 200);
         padding: 0px;
     }
 
-    button,
+    button
+    {
+        background-color: rgb(48, 213, 200);
+        border: none;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
     datalist 
     {
+        border-radius: 5px;
+        padding: 10px 20px;
         background-color: rgb(46, 46, 46);
     }
 
     input[type=text] 
     {
+        border-radius: 5px;
+        padding: 10px 20px;
         color: rgb(48, 213, 200);
         background-color: rgb(46, 46, 46);
         border: 1px solid;
@@ -30,11 +41,13 @@
     #serialResults 
     {
         font-family: monospace;
+        font-size: 110%;
+        border-radius: 10px;
         white-space: pre;
         height: calc(100% - 180px);
         width: calc(100% - 20px);
         border-style: solid;
-        overflow: scroll;
+        overflow: auto;
         background-color: rgb(35, 35, 35);
         padding: 10px;
         margin: 0px;
@@ -69,8 +82,8 @@ Baud:
 <button onclick="serialResultsDiv.innerHTML = '';">Clear</button>
 
 <br>
-<input type="text" id="lineToSend" style="width:calc(100% - 90px)">
-<button onclick="sendSerialLine()" style="width:70px">Send</button>
+<input type="text" id="lineToSend" style="width:90%">
+<button onclick="sendSerialLine()" style="width:10%">Send</button>
 <br>
 
 <input type="checkbox" id="addLine" onclick="localStorage.addLine = this.checked;" checked>
@@ -151,5 +164,5 @@ Baud:
     document.getElementById("echoOn").checked = (localStorage.echoOn == "false" ? false : true);
 
 </script>
-<br> © 2021 Mike Molinari (mmiscool) Source <a
+<br> Based on: © 2021 Mike Molinari (mmiscool) Source <a
     href="https://github.com/mmiscool/serialTerminal.com">https://github.com/mmiscool/serialTerminal.com</a>
