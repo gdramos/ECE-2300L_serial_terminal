@@ -43,7 +43,7 @@
         font-size: 110%;
         border-radius: 10px;
         white-space: pre;
-        height: calc(100% - 180px);
+        height: calc(100% - 200px);
         width: calc(100% - 20px);
         border-style: solid;
         overflow: auto;
@@ -65,7 +65,7 @@
 <header style="text-align: center;">ECE-2300L EEPROM Programmer Serial Terminal</header>
 <br>
 BAUDRATE:
-<input type="text" id="baud" list="baudList" style="width: 15ch;" onclick="this.value = ''"
+<input type="text" id="baud" list="baudList" style="width: 14ch;" onclick="this.value = ''"
     onchange="localStorage.baud = this.value">
 <datalist id="baudList">
     <option value="110">110</option>
@@ -83,12 +83,8 @@ BAUDRATE:
     <option value="128000">128000</option>
     <option value="256000">256000</option>
 </datalist>
-<button onclick="connectSerial()">CONNECT</button>
-<button onclick="serialResultsDiv.innerHTML = '';">CLEAR</button>
-
-<br>
-<input type="text" id="lineToSend" style="width:50%">
-<button onclick="sendSerialLine()" style="width:10%">SEND</button>
+<button onclick="connectSerial()" style="width:10%">CONNECT</button>
+<button onclick="serialResultsDiv.innerHTML = '';" style="width:10%">CLEAR</button>
 
 <input type="checkbox" id="addLine" onclick="localStorage.addLine = this.checked;" checked>
 <label for="addLine">Append CR</label>
@@ -96,6 +92,9 @@ BAUDRATE:
 <input type="checkbox" id="echoOn" onclick="localStorage.echoOn = this.checked;" checked>
 <label for="echoOn">Local echo</label>
 
+<br>
+<input type="text" id="lineToSend" style="width:89%">
+<button onclick="sendSerialLine()" style="width:10%">SEND</button>
 
 <br>
 <div id="serialResults">
