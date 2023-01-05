@@ -1,0 +1,37 @@
+<!DOCTYPE  html>
+<html>
+
+<!--HEAD---------------------------------------------------------------------->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="Description" content="74LSXX Pinout Viewer">
+  <link href='https://fonts.googleapis.com/css?family=Kite One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=KoHo' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css">
+
+  <title>74LSXX Pinout Viewer</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<!--BODY---------------------------------------------------------------------->
+<body>
+  <header>
+    <h3 class="showBorder" align="center">74LSXX Pinout Viewer</h3>
+  </header>
+  <div align="center" class="controls" style="float:center;">
+    <input class="controls" type="text" id="baud" list="pinoutsList" style="width: 100%;" onclick="this.value = ''" onchange="pinoutImage.src = this.getAttribute('data-pinoutLink')">
+    <datalist id="pinoutsList">
+      <option data-pinoutLink = "images/pinout_74ls00.png" value="images/pinout_74ls00.png"></option>
+      <option data-pinoutLink = "images/pinout_74ls04.png" value="images/pinout_74ls04.png"></option>
+      <option data-pinoutLink = "images/pinout_74ls08.png" value="images/pinout_74ls08.png"></option>
+      <option data-pinoutLink = "images/pinout_74ls32.png" value="images/pinout_74ls32.png"></option>
+    </datalist>
+  </div>
+  <div align="center">
+    <img id="pinoutImage" src="images/pinout_74ls00.png" alt="pinout" align="center" style="height: 80vh; object-fit: contain;">
+  </div>
+
+</body>
+
+</html>
+<!--EOF----------------------------------------------------------------------->
